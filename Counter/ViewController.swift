@@ -9,11 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet private weak var clickButton: UIButton!
+    @IBOutlet private weak var bookCountLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
+    @IBAction private func buttonDidTap(_ sender: Any) {
+        count += 1
+        bookCountLabel.text = "Значение счётчика: \(count)"
+    }
+    private var count: Int = 0
+    
 }
 
